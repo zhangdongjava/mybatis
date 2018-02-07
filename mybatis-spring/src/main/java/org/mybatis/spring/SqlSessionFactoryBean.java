@@ -74,6 +74,7 @@ import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
  * @see #setDataSource
  * @version $Id$
  */
+//SqlSessionFactoryBean实现了Spring的InitializingBean接口，InitializingBean接口的afterPropertiesSet方法中会调用buildSqlSessionFactory方法
 public class SqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>, InitializingBean, ApplicationListener<ApplicationEvent> {
 
   private static final Log LOGGER = LogFactory.getLog(SqlSessionFactoryBean.class);

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/mybatis-3-mybatis-3.4.5/my-mybatis.iml" filepath="$PROJECT_DIR$/mybatis-3-mybatis-3.4.5/my-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-3-mybatis-3.4.5/mybatis.iml" filepath="$PROJECT_DIR$/mybatis-3-mybatis-3.4.5/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-spring/mybatis-spring.iml" filepath="$PROJECT_DIR$/mybatis-spring/mybatis-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-test/mybatis-test.iml" filepath="$PROJECT_DIR$/mybatis-test/mybatis-test.iml" />
     </modules>
   </component>
 </project>
