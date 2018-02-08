@@ -34,13 +34,16 @@ import org.apache.ibatis.reflection.ExceptionUtil;
  */
 public class SqlSessionManager implements SqlSessionFactory, SqlSession {
 
+  //相当于DefaultSqlSessionFactory的实例（不是proxy）
   private final SqlSessionFactory sqlSessionFactory;
+  //是JDK动态代理出来的proxy（是proxy）。
   private final SqlSession sqlSessionProxy;
-
+  // 保持线程局部变量SqlSession的地方
   private final ThreadLocal<SqlSession> localSqlSession = new ThreadLocal<SqlSession>();
 
   private SqlSessionManager(SqlSessionFactory sqlSessionFactory) {
     this.sqlSessionFactory = sqlSessionFactory;
+    // 这个proxy是重点
     this.sqlSessionProxy = (SqlSession) Proxy.newProxyInstance(
         SqlSessionFactory.class.getClassLoader(),
         new Class[]{SqlSession.class},
