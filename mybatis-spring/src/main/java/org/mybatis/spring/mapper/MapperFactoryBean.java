@@ -23,9 +23,10 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.FactoryBean;
 
-/**
+/**                         注入
  * BeanFactory that enables injection of MyBatis mapper interfaces. It can be set up with a
  * SqlSessionFactory or a pre-configured SqlSessionTemplate.
+ *                        预先配置的
  * <p>
  * Sample configuration:
  *

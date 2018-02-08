@@ -53,6 +53,7 @@ import org.springframework.util.StringUtils;
  * @see MapperFactoryBean
  * @since 1.2.0
  * @version $Id$
+ *
  */
 public class ClassPathMapperScanner extends ClassPathBeanDefinitionScanner {
 
@@ -113,6 +114,8 @@ public class ClassPathMapperScanner extends ClassPathBeanDefinitionScanner {
    * Configures parent scanner to search for the right interfaces. It can search
    * for all interfaces or just for those that extends a markerInterface or/and
    * those annotated with the annotationClass
+   * registerFilters方法主要是根据annotationClass或者是
+   * markerInterface属性来指定只扫描指定包下面的类带有某个注解的接口或者是为某个接口的子接口的接口
    */
   public void registerFilters() {
     boolean acceptAllInterfaces = true;

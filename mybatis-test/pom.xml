@@ -7,7 +7,10 @@
     <groupId>com.zzz.study</groupId>
     <artifactId>mybatis-test</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.mybatis-spring</groupId>
@@ -26,7 +29,11 @@
             <version>1.4</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
     </dependencies>
 
 

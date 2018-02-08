@@ -284,6 +284,7 @@ public class MapperAnnotationBuilder {
   }
 
   void parseStatement(Method method) {
+    //一个是参数类型  多个是map类型
     Class<?> parameterTypeClass = getParameterType(method);
     LanguageDriver languageDriver = getLanguageDriver(method);
     SqlSource sqlSource = getSqlSourceFromAnnotations(method, parameterTypeClass, languageDriver);

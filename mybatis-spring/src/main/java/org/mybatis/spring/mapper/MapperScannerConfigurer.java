@@ -92,6 +92,9 @@ import org.springframework.util.StringUtils;
  * @see MapperFactoryBean
  * @see ClassPathMapperScanner
  * @version $Id$
+ *BeanDefinitionRegistryPostProcessor中定义的
+ * postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry)方法
+ * 可以让我们实现自定义的注册bean定义的逻辑
  */
 public class MapperScannerConfigurer implements BeanDefinitionRegistryPostProcessor, InitializingBean, ApplicationContextAware, BeanNameAware {
 
