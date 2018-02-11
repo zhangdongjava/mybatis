@@ -2,7 +2,6 @@ package com.zzz.study.test;
 
 import com.zzz.study.dao.DaiLiMapper;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,7 +18,7 @@ public class Test {
         ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
         SqlSessionFactory sqlSessionFactory=(SqlSessionFactory) context.getBean("sqlSessionFactory");
         SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
-        List<String> list = sqlSessionFactory.getConfiguration().getMapper(DaiLiMapper.class,sqlSessionFactory.openSession()).getCount();
+        List<String> list = sqlSessionTemplate.getMapper(DaiLiMapper.class).getCount();
         System.out.println(list);
         Map<String, SqlSessionFactory> map = context.getBeansOfType(SqlSessionFactory.class);
         System.out.println(map);
